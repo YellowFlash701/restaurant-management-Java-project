@@ -1,0 +1,36 @@
+td {
+    text-align: center;
+    padding: 10px;
+}
+th {
+    padding: 10px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0px 1px;
+    text-align: left;
+}
+
+tr {
+    background-color: whitesmoke;
+}
+
+.tableWrapper {
+    padding: 20px;
+    height: 25%;
+    max-height: 80%;
+}
+
+.main {
+    display: block !important;
+}
+
+.detailsLink {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 10px;
+}

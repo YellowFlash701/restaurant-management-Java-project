@@ -1,0 +1,37 @@
+html {
+    font-size: 1rem;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding: 8px 5px;
+    border-radius: 3px;
+    margin: 4px auto;
+    background: linear-gradient(white, gainsboro);
+    max-width: 400px;
+}
+
+.item span {
+    width: 100%;
+    text-align: right;
+}
+.index {
+    width: fit-content !important;
+}
+
+.item-id {
+    text-align: center !important;
+}
+
+.price-unit {
+    text-align: left !important;
+    width: fit-content !important;
+    margin-left: 2px;
+}
+
+.index {
+    font-weight: bold;
+    border-right: 1px solid gray;
+    padding: 0px 8px;
+}

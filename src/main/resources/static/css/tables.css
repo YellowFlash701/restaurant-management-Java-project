@@ -1,0 +1,144 @@
+
+.mini-section {
+    padding: 10px;
+    display: block;
+    text-align: right;
+}
+
+@keyframes slideIn {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom:50%;
+    }
+}
+
+.section {
+    background: whitesmoke;
+    margin-top: 5px;
+    margin-left: 5px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.small-title {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.information-wrapper {
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    height: fit-content;
+}
+
+.sub-section {
+    display: block;
+    border-bottom: 1px solid gray;
+
+    padding: 5px;
+}
+
+#tablesWrapper {
+    text-align: justify;
+
+    overflow-y: auto;
+
+    background: whitesmoke;
+
+    scrollbar-width: thin;
+
+    max-height: 60vh;
+}
+
+#tableDetailsSection {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#tableControlButtonsSection {
+    text-align: right;
+    padding: 5px;
+}
+
+.table-box {
+    width: 80px;
+    height: 80px;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin: 10px;
+
+    padding: 4px;
+    border-radius: 5px;
+
+    border: 1px solid gray;
+
+    text-align: center;
+}
+
+label {
+    margin: 0 5px;
+}
+
+.input-wrapper {
+    padding: 5px;
+}
+
+input, button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    margin: 5px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.selected {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.available {
+    background: rgb(135, 243, 135);
+}
+
+.full {
+    background: rgb(149, 169, 255);
+}
+
+.out-of-service {
+    background: rgb(229, 116, 108);
+}
+
+.table-box:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@media only screen and(max-width: 600px) {
+    .mini-section {
+        padding: 5px;
+        display: grid;
+        margin: 5px 0;
+        justify-content: space-around;
+        grid-template-columns: min-content min-content;
+    }
+
+    .table-box {
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .section {
+        margin: 5px 0;
+        padding: 0;
+    }
+}

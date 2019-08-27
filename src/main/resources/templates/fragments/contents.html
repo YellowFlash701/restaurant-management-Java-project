@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="tableContent" th:fragment="tables(tableList, stats)">
+        <div class="sub-section">
+            <h2 class="small-title">Current Status</h2>
+            <div class="information-wrapper">
+                <label>Total:</label>
+                <span th:text="${stats.totalCount}"></span>
+            </div>
+            <div class="information-wrapper">
+                <label>Available:</label>
+                <span th:text="${stats.availableCount}"></span>
+            </div>
+            <div class="information-wrapper">
+                <label>Full:</label>
+                <span th:text="${stats.fullCount}"></span>
+            </div>
+            <div class="information-wrapper">
+                <label>Out of service:</label>
+                <span th:text="${stats.outOfServiceCount}"></span>
+            </div>
+        </div>
+        <div class="sub-section" id="tablesWrapper">
+            <div th:each="table : ${tableList}" class="table-box" th:onclick="'javascript:processUpdateTableStatus('+${table.tableId}+')'" th:classappend="${table.status.getStatusText().toLowerCase().replaceAll(' ','-')}">
+                <span class="table-title" th:text="'Table '+${table.tableId}"></span>
+                <span class="table-status" th:text="${table.status.getStatusText()}"></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-bg" th:fragment="orderItems(meals, beverages, desserts)">
+        <div id="cart" th:fragment="cart">
+            <div class="cart-header">
+                <h2>Order</h2>
+            </div>
+            <div id="itemList">
+            </div>
+            <div id="cartInfo">
+                <label>Total: <span id="cartPrice">0</span><span id="priceUnit"> ₺</span></label>
+                <span>
+                <a onclick="clearCart();" class="linkButton">clear</a>
+            </span>
+            </div>
+            <div id="cartFinalize">
+                <div>
+                    <input type="number" placeholder="Table" id="tableNumberField">
+                </div>
+                <div id="cartControls">
+                    <button id="saveOrderButton">Save</button>
+                </div>
+            </div>
+        </div>
+        <div id="orderControls">
+            <div class="tableWrapper">
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Beverage</th>
+                        <th>Dessert</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th></th>
+                                </tr>
+                                <tr th:each="meal : ${meals}">
+                                    <td th:text="${meal.productId}"></td>
+                                    <td th:text="${meal.name}"></td>
+                                    <td th:text="${meal.price}"></td>
+                                    <td th:text="${meal.stock}"></td>
+                                    <td>
+                                        <a class="linkButton" th:onclick="'javascript:addItemToCart('+${meal.productId}+')'">Add</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th></th>
+                                </tr>
+                                <tr th:each="beverage : ${beverages}">
+                                    <td th:text="${beverage.productId}"></td>
+                                    <td th:text="${beverage.name}"></td>
+                                    <td th:text="${beverage.price}"></td>
+                                    <td th:text="${beverage.stock}"></td>
+                                    <td>
+                                        <a class="linkButton" th:onclick="'javascript:addItemToCart('+${beverage.productId}+')'">Add</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th></th>
+                                </tr>
+                                <tr th:each="dessert : ${desserts}">
+                                    <td th:text="${dessert.productId}"></td>
+                                    <td th:text="${dessert.name}"></td>
+                                    <td th:text="${dessert.price}"></td>
+                                    <td th:text="${dessert.stock}"></td>
+                                    <td>
+                                        <a class="linkButton" th:onclick="'javascript:addItemToCart('+${dessert.productId}+')'">Add</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

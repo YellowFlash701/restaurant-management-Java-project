@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Items</title>
+    
+        <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}">
+        <link rel="stylesheet" href="/css/items.css">
+        <link rel="stylesheet" href="/css/modal.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="page-header" th:replace="fragments/general :: pageHeader(title=' / Items', userData=${user})"/>
+            <div class="nav side-nav" th:replace="fragments/general :: sideNav"/>
+            <div class="main">
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <label onclick="window.location='/products?sort=id'" class="row-label">ID</label>
+                            </th>
+                            <th>
+                                <label onclick="window.location='/products?sort=name'" class="row-label">Name</label>
+                            </th>
+                            <th>
+                                <label onclick="window.location='/products?sort=type'" class="row-label">Type</label>
+                            </th>
+                            <th>
+                                <label onclick="window.location='/products?sort=stock'" class="row-label">Stock</label>
+                            </th>
+                            <th>
+                                <label onclick="window.location='/products?sort=price'" class="row-label">Price</label>
+                            </th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr th:each="product : ${items}">
+                            <td>
+                                <span th:text="${productStat.index+1}" class="product-index"></span>
+                            </td>
+                            <td>
+                                <span th:text="${product.productId}" class="product-id"></span>
+                            </td>
+                            <td>
+                                <span th:text="${product.name}" class="product-name"></span>
+                            </td>
+                            <td>
+                                <span th:text="${product.itemType}" class="product-type"></span>
+                            </td>
+                            <td>
+                                <span th:text="${product.stock}" class="product-stock"></span>
+                            </td>
+                            <td>
+                                <span th:text="${product.price}" class="product-price"></span>
+                            </td>
+                            <td>
+                                <a class="linkButton" th:href="'api/product/'+${product.productId}+'/details'">Details</a>
+                            </td>
+                            <td>
+                                <a class="linkButton" th:onclick="'javascript:createStockUpdatePopup('+${product.productId}+')'">Add Stock</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="itemControls">
+                        <a id="createItemButton" class="linkButton" href="/api/product/create">Create New</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/dropdownUtils.js" th:src="@{/js/dropdownUtils.js}"></script>
+        <script src="/js/modalUtils.js" th:src="@{/js/modalUtils.js}"></script>
+        <script src="/js/itemUtils.js" th:src="@{/js/itemUtils.js}"></script>
+    </body>
+</html>
+

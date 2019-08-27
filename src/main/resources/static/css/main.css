@@ -1,0 +1,269 @@
+html {
+    font-family: 'Calibri Light';
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    max-width: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    height: inherit;
+
+    font-size: 0.8rem;
+}
+
+.wrapper {
+    height: inherit;
+
+    margin: auto auto;
+
+    background: white;
+
+    display: grid;
+
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto;
+}
+
+.side-nav {
+    background: whitesmoke;
+    padding: 20px;
+    margin-top: 5px;
+    border: 1px solid gray;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    font-size: 1rem;
+}
+
+.nav-item {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    color: black;
+}
+.nav-item:hover {
+    text-decoration: underline black;
+}
+
+.page-header {
+    background: whitesmoke;
+
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid gray;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    border-right: 1px solid gray;
+
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.big-title {
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 20px;
+    margin: 0;
+}
+
+.small-title {
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.plain-text {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.corner-container {
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+#userDropdown {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: auto;
+}
+#userDropdown .dropdown-text {
+    font-size: 1rem;
+}
+
+#userDropdown .dropdown-content {
+    transform: translate(-50%, 10%);
+    max-height: 300px !important;
+}
+
+#logoutButton {
+    width: fit-content;
+    height: 100%;
+
+    cursor: pointer;
+
+    border: 1px solid gray;
+    background: none;
+
+    font-weight: bold;
+
+    display: block;
+
+    margin: auto;
+    margin-top: 10px;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    font-size: 1rem;
+}
+#logoutForm {
+    padding: 10px;
+    text-align: left;
+}
+
+#logoutForm span {
+    margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader {
+    border: 6px solid black;
+    border-color: white transparent white transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    html {
+        padding: 0;
+        font-size: 0.8rem;
+    }
+
+    .nav-item {
+        display: inline;
+    }
+    .side-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    .wrapper {
+        display: block;
+        height: auto;
+        border: none;
+    }
+    .main {
+        display: block;
+        height: auto;
+    }
+
+}
+
+#profileLink {
+    text-decoration: none;
+    color: black;
+    height: fit-content;
+    align-self: center;
+    font-size: 1rem;
+}
+
+.dropdown {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    min-width: 60px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    height: fit-content;
+    align-self: center;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    min-width: 100px;
+    max-height: 150px;
+
+    width: max-content;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
+}
+.dropdown-expanded {
+    display: block;
+}
+.dropdown-item {
+    padding: 10px 0;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid gray;
+    text-align: center;
+    transition: 0.1s;
+}
+.dropdown-item:hover {
+    background-color: white;
+}
+.dropdown-text {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}

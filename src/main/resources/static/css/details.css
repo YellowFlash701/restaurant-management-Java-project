@@ -1,0 +1,63 @@
+td {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 1px 1px;
+}
+
+tr {
+    background-color: whitesmoke;
+}
+
+th {
+    padding: 10px;
+    background-color: whitesmoke;
+    text-align: left;
+}
+
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.tableWrapper {
+    margin: 20px;
+    border: 1px solid gray;
+}
+
+.row-title {
+    background: white;
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 5px;
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.context-title {
+    height: fit-content;
+    align-self: center;
+}
+
+.controls {
+    text-align: right;
+    padding: 5px 10px;
+}
+
+.linkButton {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px 5px;
+    border: 1px solid gray;
+    background: whitesmoke;
+    display: inline-block;
+}

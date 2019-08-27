@@ -1,0 +1,46 @@
+.table-wrapper {
+    padding: 20px;
+    max-height: 1000px;
+}
+#itemControls {
+    text-align: right;
+    padding: 5px;
+    margin: 20px 5px;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    border-spacing: 1px !important;
+    width: 100%;
+}
+
+.row-label {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+tr {
+    padding: 10px;
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+th {
+    background-color: lightgray;
+}
+
+.linkButton {
+    padding: 5px;
+    background: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}

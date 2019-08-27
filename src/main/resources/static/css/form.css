@@ -1,0 +1,151 @@
+html{
+    padding: 0;
+    margin: 0;
+
+    font-family: sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+form {
+    margin: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 15vw;
+    max-width: 250px;
+    min-width: fit-content;
+    height: fit-content;
+
+    background: whitesmoke;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 10px 30px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.big-title {
+    border-bottom: 1px solid gray;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.small-title {
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.field-title {
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 0px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: normal;
+    color: blue;
+    border-bottom: 1px solid gray;
+}
+
+.form-header {
+    padding: 5px;
+}
+
+.form-footer {
+    border-top: 1px solid gray;
+    padding: 5px;
+
+    text-align: center;
+}
+
+#signupLink {
+    text-align: center;
+    font-size: 0.8rem;
+}
+#submitButton {
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    background: white;
+
+    padding: 10px;
+    margin: 5px auto;
+
+    border: 1px solid gray;
+
+    color: blue;
+
+    width: fit-content;
+}
+
+input {
+    padding: 5px;
+    display: block;
+    width: available;
+    width: -moz-available;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 15px;
+    width: fit-content;
+}
+
+.input-group {
+    padding: 5px;
+    border: 1px solid gray;
+    margin-top: 15px;
+}
+
+.alert {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.alert-error {
+    background: #ffb5b5;
+}
+.alert-warn {
+    background: #b5caff;
+}
