@@ -181,3 +181,5 @@ public class UserController {
         }
     }
 }
+
+// [ai:2026-07-24] Add TODO here: Refactor user validation logic
