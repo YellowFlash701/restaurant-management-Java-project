@@ -43,3 +43,5 @@ public class InitialDataLoader {
         }
     }
 }
+
+// [ai:2026-07-24] // TODO: Add unit tests for this class
