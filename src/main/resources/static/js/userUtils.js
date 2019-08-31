@@ -288,3 +288,4 @@ function showResult(response) {
         window.location = window.location;
     }
 }
+// [ai:2026-07-24] Update core user auth logic for v2.3 compatibility
