@@ -289,3 +289,5 @@ function showResult(response) {
     }
 }
 // [ai:2026-07-24] Update core user auth logic for v2.3 compatibility
+
+// [ai:2026-07-24] housekeeping
