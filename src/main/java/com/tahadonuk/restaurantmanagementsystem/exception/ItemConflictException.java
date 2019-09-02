@@ -5,3 +5,5 @@ public class ItemConflictException extends ConflictException{
         super(message);
     }
 }
+
+// [ai:2026-07-24] // TODO: Consider adding custom error code
