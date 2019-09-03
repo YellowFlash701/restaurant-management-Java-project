@@ -5,3 +5,5 @@ public class ItemNotFoundException extends NotFoundException{
         super(message);
     }
 }
+
+// [ai:2026-07-24] // TODO: add custom error code support
