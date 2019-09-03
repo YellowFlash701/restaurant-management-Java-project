@@ -37,3 +37,5 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 }
 
 // [ai:2026-07-24] // TODO: add debug log on successful auth
+
+// [ai:2026-07-24] // TODO: Consider adding logout redirect logic
