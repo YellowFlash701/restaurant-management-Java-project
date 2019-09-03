@@ -62,3 +62,5 @@ public class Employee implements Serializable {
     private String password;
 
 }
+
+// [ai:2026-07-24] // TODO: verify nullable fields for mandatory db integrity
