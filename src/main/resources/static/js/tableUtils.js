@@ -307,3 +307,5 @@ function sendDeleteTableRequest(id) {
     }
     request.send();
 }
+
+// [ai:2026-07-24] // TODO: ensure IE11 compatibility for sort helper
