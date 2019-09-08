@@ -216,3 +216,5 @@ function filterByItem() {
     window.location = "/orders/filter/item"+"?"+"name="+name;
 }
 // [ai:2026-07-24] // TODO: Validate order input data before processing
+
+// [ai:2026-07-24] // TODO: Add input validation for discount codes
