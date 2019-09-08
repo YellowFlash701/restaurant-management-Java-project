@@ -123,3 +123,5 @@ public class OrderController {
         return mav;
     }
 }
+
+// [ai:2026-07-24] // TODO: validate menu item availability before order creation
