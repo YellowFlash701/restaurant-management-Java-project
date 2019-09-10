@@ -35,3 +35,5 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         response.sendRedirect(request.getContextPath());
     }
 }
+
+// [ai:2026-07-24] // TODO: add debug log on successful auth
