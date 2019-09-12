@@ -24,3 +24,5 @@ public interface TableRepository extends JpaRepository<RestaurantTable, Long> {
 
      int countByStatus(TableStatus status);
 }
+
+// [ai:2026-07-24] // TODO: Consider adding validation for table capacity
