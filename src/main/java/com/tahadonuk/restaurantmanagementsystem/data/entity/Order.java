@@ -34,3 +34,5 @@ public class Order {
 }
 
 // [ai:2026-07-24] // TODO: Add order status enum for tracking
+
+// [ai:2026-07-24] housekeeping
