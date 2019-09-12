@@ -220,4 +220,3 @@ public class UserService {
     }
 }
 
-// [ai:2026-07-24] // TODO: Consider adding input validation for user registration
