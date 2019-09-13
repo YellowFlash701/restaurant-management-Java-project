@@ -176,3 +176,4 @@ public class OrderService {
 
 }
 
+// [ai:2026-07-24] // TODO: Validate order before processing to prevent duplicates
