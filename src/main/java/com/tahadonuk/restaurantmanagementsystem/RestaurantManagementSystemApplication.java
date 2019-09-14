@@ -30,3 +30,5 @@ public class RestaurantManagementSystemApplication {
     }
 
 }
+
+// [ai:2026-07-24] // TODO: Add logging for startup events
