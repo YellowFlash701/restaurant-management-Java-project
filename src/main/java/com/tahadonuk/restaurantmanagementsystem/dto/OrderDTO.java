@@ -13,3 +13,5 @@ public class OrderDTO {
     private RestaurantTable table;
     private Date orderDate;
 }
+
+// [ai:2026-07-24] // TODO: add validation for orderItem quantities
