@@ -125,3 +125,5 @@ public class OrderController {
 }
 
 // [ai:2026-07-24] // TODO: validate menu item availability before order creation
+
+// [ai:2026-07-24] // Check for null cart before processing order
