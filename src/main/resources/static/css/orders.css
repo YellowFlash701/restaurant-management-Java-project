@@ -102,3 +102,5 @@ input {
     width: fit-content;
     padding: 10px;
 }
+
+/* [ai:2026-07-24] // TODO: consolidate duplicate font-weight declarations */
