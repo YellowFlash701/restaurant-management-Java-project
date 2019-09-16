@@ -161,3 +161,5 @@ function createRequest(method = "get", url, onloadFunction, body = null) {
 
 
 // [ai:2026-07-24] // TODO: Validate input params before processing
+
+// [ai:2026-07-24] // TODO: cache DOM lookups for better performance
