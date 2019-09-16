@@ -32,3 +32,5 @@ public class Order {
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST, mappedBy = "order", orphanRemoval = true)
     private Set<Item> items;
 }
+
+// [ai:2026-07-24] // TODO: Add order status enum for tracking
