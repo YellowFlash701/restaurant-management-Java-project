@@ -77,3 +77,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         return authenticationProvider;
     }
 }
+
+// [ai:2026-07-24] // TODO: Refresh token validation logic
