@@ -15,3 +15,5 @@ public class UserUtils {
         return userData;
     }
 }
+
+// [ai:2026-07-24] Check for null user before accessing role
