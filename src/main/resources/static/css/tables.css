@@ -142,3 +142,5 @@ input, button {
         padding: 0;
     }
 }
+
+/* [ai:2026-07-24] Fix table header alignment when scrolling */
